@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  calculator:
+    build: .
+    container_name: my_calc
+    stdin_open: true   # чтобы работал ввод
+    tty: true          # чтобы работал вывод (цвета)docke
