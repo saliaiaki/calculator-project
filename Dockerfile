@@ -1,11 +1,10 @@
-# Берём образ с Python
 FROM python:3.11-slim
 
-# Создаём папку внутри контейнера
 WORKDIR /app
 
-# Копируем наши файлы в контейнер
 COPY calc.py style.py ./
 
-# Говорим, как запускать
+# Устанавливаем зависимости
+RUN pip install psycopg2-binary
+
 CMD ["python3", "calc.py"]
